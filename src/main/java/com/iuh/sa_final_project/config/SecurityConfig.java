@@ -27,15 +27,15 @@ public class SecurityConfig {
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
-            .csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**"))
+            // .csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**"))
             .authorizeRequests(auth -> auth
-                .requestMatchers("/h2-console/**").permitAll()
+                .requestMatchers("/ttt").permitAll()
                 .anyRequest().authenticated()
             )
             .userDetailsService(jpaUserDetalsService)
-            .headers(header -> header
-                .frameOptions().sameOrigin()
-            )
+            // .headers(header -> header
+            //     .frameOptions().sameOrigin()
+            // )
             // .formLogin(Customizer.withDefaults())
             .httpBasic(Customizer.withDefaults())
         .build();
