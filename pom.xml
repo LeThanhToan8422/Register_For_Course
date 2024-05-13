@@ -82,7 +82,7 @@
 					</execution>
 
 					<!--Running npm install -->
-					<execution>
+					<execution> 
 						<id>npm install</id>
 						<goals>
 							<goal>npm</goal>

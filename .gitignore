@@ -33,3 +33,5 @@ build/
 .vscode/
 
 ./src/main/java/com/iuh/sa_final_project/interfaces/node_modules
+
+.target
